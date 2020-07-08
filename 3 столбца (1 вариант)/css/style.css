@@ -1,0 +1,90 @@
+
+  header {
+    grid-area: header;
+    background-color: lawngreen;
+  }
+  
+  nav {
+    grid-area: nav;
+    margin-left: 0.5rem;
+    background-color: khaki;
+  }
+  body{
+      background-image: url(1.jpg);
+      background-color: lightsalmon;
+  }
+  
+  main {
+    grid-area: content;
+    background-color: gray;
+    
+  
+  }
+  
+  aside {
+    grid-area: side;
+    margin-right: 0.5rem;
+    background-color: rgb(207, 241, 12);
+    
+  }
+  
+  footer {
+    grid-area: footer;
+    background-color: hotpink;
+  }
+  header {
+    grid-area: header;
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  @media (max-width: 768px) {
+    .container {
+      grid-template-areas:
+        "header"
+        "nav"
+        "content"
+        "side"
+       /* "footer";*/
+       
+  
+      grid-template-columns: 1fr;
+      grid-template-rows:
+        auto /* Header */
+        minmax(75px, auto) /* Nav */
+        1fr /* Content */
+        minmax(75px, auto) /* Sidebar */
+        auto; /* Footer */
+        
+    }
+  
+    nav, aside {
+      margin: 0;
+      padding: 1.5rem;
+      border-radius: 1rem;
+    }
+    div {
+  
+        padding: 1.5rem;
+        border-radius: 1rem;}
+  }
+.container {
+    display: grid;
+  
+    grid-template-areas:
+      "header header header"
+      "nav content side"
+      "footer footer footer";
+  
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-rows: auto 1fr auto;
+    grid-gap: 10px;
+  
+    height: 100vh;
+  }
+  .grid  {
+
+    padding: 1.5rem;
+    border-radius: 1rem;
+  

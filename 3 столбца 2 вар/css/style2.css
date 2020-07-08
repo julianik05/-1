@@ -1,0 +1,195 @@
+
+ #header {
+    grid-area: header;
+    background-image: url(https://cdn.pixabay.com/photo/2018/10/07/02/18/background-3729144_1280.jpg) ;
+    
+
+    clear: both 
+    width=100%;
+}
+#footer {
+    clear:both;
+    float:left;
+    width:100%;
+    border-top:1px solid #000;
+}
+/*nav ul li {
+  float: right;
+  padding: 10px;
+  text-align: center;
+  list-style: none;
+}*/
+.holygrail {
+    background: #ff9;
+  }
+  .st1{
+    position: relative;
+    clear: both;
+    float: left;
+    width: 100%;
+    overflow: hidden;
+ 
+  }
+  div{
+    display: block;
+  }
+  .st2,
+  .st3{
+    float:left;
+	width:100%;			/* width of page */
+	position:relative;
+}
+.kol1,
+.kol2,
+.kol3 {
+	float:left;
+	position:relative;
+	padding:0 0 1em 0;	/* no left and right padding on columns, we just make them narrower instead 
+					only padding top and bottom is included here, make it whatever value you need */
+	overflow:hidden;
+}
+	/* right column background colour */
+
+.st2{
+	right:20%;			/* width of the right column */
+	background:rgb(168, 240, 162);		/* center column background colour */
+}
+.st3{
+	right:60%;			/* width of the middle column */
+	background:#eb6bf0;	/*; left column background colour */
+}
+.kol1 {
+	width:56%;			/* width of center column content (column width minus padding on either side) */
+	left:102%;			/* 100% plus left padding of center column */
+}
+.kol2 {
+	width:16%;			/* Width of left column content (column width minus padding on either side) */
+	left:26%;			/* width of (right column) plus (center column left and right padding) plus (left column left padding) */
+}
+.kol3 {
+	width:16%;			/* Width of right column content (column width minus padding on either side) */
+	left:90%;			/* Please make note of the brackets here:
+					(100% - left column width) plus (center column left and right padding) plus (left column left and right padding) plus (right column left padding) */
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 1rem;
+}
+.grid > div {
+  background: #EDE7F6;
+  padding: 1.5rem;
+  border-radius: 1rem;
+}
+.flex-container {
+  /* We first create a flex layout context */
+  display: flex;
+  
+  /* Then we define the flow direction 
+     and if we allow the items to wrap 
+   * Remember this is the same as:
+   * flex-direction: row;
+   * flex-wrap: wrap;
+   */
+  flex-flow: row wrap;
+  
+  /* Then we define how is distributed the remaining space */
+  justify-content: space-around;
+  
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.flex-item {
+  background: rgb(238, 100, 243);
+  padding: 5px;
+  width: 200px;
+  height: 150px;
+  margin-top: 10px;
+  line-height: 150px;
+  color: white;
+  font-weight: bold;
+  font-size: 3em;
+  text-align: center;
+}
+h2{
+  
+
+}
+  /*nav {
+    grid-area: nav;
+    margin-left: 0.5rem;
+    background-color: khaki;
+  }
+  body{
+      background-image: url(1.jpg);
+      background-color: lightsalmon;
+  }
+  
+  main {
+    grid-area: content;
+    background-color: gray;
+  }
+  
+  aside {
+    grid-area: side;
+    margin-right: 0.5rem;
+    background-color: rgb(207, 241, 12);
+    
+  }
+  
+  footer {
+    grid-area: footer;
+    background-color: hotpink;
+  }
+  header {
+    grid-area: header;
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  @media (max-width: 768px) {
+    .container {
+      grid-template-areas:
+        "header"
+        "nav"
+        "content"
+        "side"
+       /* "footer";*/
+       
+  
+     
+   
+  
+    /*nav, aside {
+      margin: 0;
+      padding: 1.5rem;
+      border-radius: 1rem;
+    }
+    div {
+  
+        padding: 1.5rem;
+        border-radius: 1rem;}
+  }
+.container {
+    display: grid;
+  
+    grid-template-areas:
+      "header header header"
+      "nav content side"
+      "footer footer footer";
+  
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-rows: auto 1fr auto;
+    grid-gap: 10px;
+  
+    height: 100vh;
+  }
+  .grid  {
+
+    padding: 1.5rem;
+    border-radius: 1rem;*/
+
+  
