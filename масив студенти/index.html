@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>
+      сортування студентів
+    </title>
+  </head>
+  <style>
+    .start {
+      max-width: 70%;
+      margin: 0 auto;
+    }
+  </style>
+  <body>
+    
+      <p class="start">
+        JavaScript програма для перевірки успішності студентів з груп Група1,
+        Група2, Група3 з різними оцінками та виводуння  інформації по рейтингам на екран</br>
+         Оцінки:<br>
+          Хороші студенти: 89-100 <br>
+          Середні студенти: 65-88 <br>
+        Слабкі студенти: 0-64 <br>
+      </p>
+      <br>
+<p class="start">
+      <ul>
+        Вхідні дані:
+        <li>Масиви arr1, arr2, arr3 з числами від 0 до 100</li>
+        <li>
+          Дві глобальні змінні nornbal = 65 (середні результати),goodbal
+          = 89 (найкращі результати)
+        </li>
+      </ul>
+      
+   </p>
+    <script>
+    var arr1 = [23,65,34,67,89,67];
+    var arr2 = [15,80,45,38,60,83];
+    var arr3 = [93,100,27,64,70,13];
+    var goodbal=89;
+    var nornbal=65;
+  
+
+       
+        myFunction(arr1,arr2,arr3)
+function myFunction(){             
+    console.log(...arguments)
+    var allstud = [].concat(...arguments);
+    console.log(allstud);
+    sortuvany(allstud);
+    document.write(`<br><h2>Вхідні дані:</h2>`);
+    printInputDate(allstud, "Всі студенти");
+    
+    var g2=sortuvany(allstud);
+   
+    outputStudent(g2);
+    }
+
+       
+        /*=====Виведдення всіх студентів=====*/
+        function printInputDate(n, bal) {
+          document.write(`${bal}<br><hr>`);
+          for (let i = 0; i < n.length; i++) {
+            document.write(` ${i + 1})  ${n[i]}<br>`);
+          }
+        }
+    
+function sortuvany (stud) {
+    var goodUser=[];
+    var normUser=[];
+    var badUser=[];
+ for(let key of stud){
+        if(key >= goodbal){
+            goodUser.push(key);console.log(key, "good");  }
+            else if((key >= nornbal)&&(key< goodbal)){
+                normUser.push(key); console.log(key, "norm")}
+                else  {badUser.push(key) ; console.log(key, "bad")}
+               
+            }
+            console.log(goodUser)  
+            console.log(normUser)   
+            console.log(badUser)     
+return [].concat([goodUser],[goodUser],[goodUser])
+  
+} 
+
+      /*======Виведення кінцевих результатів=====*/
+      function outputStudent(g1) {
+        document.write(`<br><h2>Результат</h2>`);
+        for (let i = 0; i < g1.length; i++) {
+          if (i == 0) document.write("<br><h3>Студенти - Високий бал</h3> <hr>");
+          else if (i == 1)
+            document.write("<br><br><h3> Студенти - Середній бал </h3><hr>");
+          else if (i == 2) document.write("<br><br><h3>Студенти - низький бал</h3><hr>");
+          for (let j = 0; j < g1[i].length; j++) {
+            document.write(` ${j + 1}) ${g1[i][j]}<br>`);
+          }
+        }
+      }
+      
+
+
+    </script>
+    
+  </body>
+</html>
